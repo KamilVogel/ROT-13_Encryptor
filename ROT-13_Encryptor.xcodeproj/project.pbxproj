@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E528B6E26191B5E0003EAEE /* RotEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */; };
 		8ED7DE7225F44767001DBCC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7DE7125F44767001DBCC5 /* AppDelegate.swift */; };
 		8ED7DE7425F44767001DBCC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7DE7325F44767001DBCC5 /* SceneDelegate.swift */; };
 		8ED7DE7625F44767001DBCC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7DE7525F44767001DBCC5 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotEncrypt.swift; sourceTree = "<group>"; };
 		8ED7DE6E25F44767001DBCC5 /* ROT-13_Encryptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ROT-13_Encryptor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED7DE7125F44767001DBCC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ED7DE7325F44767001DBCC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E528B6A26191B090003EAEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E528B6B26191B120003EAEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8ED7DE7725F44767001DBCC5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E528B6C26191B2C0003EAEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8ED7DE7525F44767001DBCC5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8ED7DE6525F44767001DBCC5 = {
 			isa = PBXGroup;
 			children = (
@@ -91,10 +117,11 @@
 		8ED7DE7025F44767001DBCC5 /* ROT-13_Encryptor */ = {
 			isa = PBXGroup;
 			children = (
-				8ED7DE7125F44767001DBCC5 /* AppDelegate.swift */,
+				8E528B6A26191B090003EAEE /* Model */,
+				8E528B6B26191B120003EAEE /* View */,
+				8E528B6C26191B2C0003EAEE /* Controller */,
 				8ED7DE7325F44767001DBCC5 /* SceneDelegate.swift */,
-				8ED7DE7525F44767001DBCC5 /* ViewController.swift */,
-				8ED7DE7725F44767001DBCC5 /* Main.storyboard */,
+				8ED7DE7125F44767001DBCC5 /* AppDelegate.swift */,
 				8ED7DE7A25F4476C001DBCC5 /* Assets.xcassets */,
 				8ED7DE7C25F4476C001DBCC5 /* LaunchScreen.storyboard */,
 				8ED7DE7F25F4476C001DBCC5 /* Info.plist */,
@@ -235,6 +262,7 @@
 				8ED7DE7625F44767001DBCC5 /* ViewController.swift in Sources */,
 				8ED7DE7225F44767001DBCC5 /* AppDelegate.swift in Sources */,
 				8ED7DE7425F44767001DBCC5 /* SceneDelegate.swift in Sources */,
+				8E528B6E26191B5E0003EAEE /* RotEncrypt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
