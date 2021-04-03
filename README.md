@@ -4,7 +4,7 @@ Simple program which encrypts text using ROT-13
 ![Screenshot](SimulatorScreenShot.png)
 
 # TODO
-- add more options (e.g. rot-3, rot-4, etc.)
+- ~~~~add more options (e.g. rot-3, rot-4, etc.)~~~~ (to add option in GUI)
 - make more friendly UI
 - shorten code
-- move code into MVC standard
+- ~~~~move code into MVC standard~~~~
