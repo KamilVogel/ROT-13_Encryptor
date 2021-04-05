@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     let rotEncrypt = RotEncrypt()
     
+    var encryptionTypeChosen: Int?
+    var decrytionChosen: Bool = false
+   
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var outputLabel: UILabel!
     
@@ -18,14 +21,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         outputLabel.text = ""
+        encryptionTypeChosen = 7
+        decrytionChosen = false
     }
 
-    @IBAction func textFiledInput(_ sender: UITextField) {
-        let text = inputTextField.text!
-        let encryptedText = rotEncrypt.encryptROT(textToEncrypt: text, decrypt: true)
-        outputLabel.text = encryptedText
+    @IBAction func encrytionSwitch(_ sender: UISwitch) {
+        decrytionChosen = !sender.isOn
+        getTextAndEncrypt()
     }
-    @IBAction func encypt(_ sender: UIButton) {
+    
+    @IBAction func textFiledInput(_ sender: UITextField) {
+        getTextAndEncrypt()
     }
     
     @IBAction func copyToClipboard(_ sender: UIButton) {
@@ -36,6 +42,11 @@ class ViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    func getTextAndEncrypt() {
+        let text = inputTextField.text ?? ""
+        let encryptedText = rotEncrypt.encryptROT(textToEncrypt: text, typeOfEncrytion: encryptionTypeChosen!, decrypt: decrytionChosen)
+        outputLabel.text = encryptedText
+    }
     
 }
 
