@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let rotEncrypt = RotEncrypt()
+    var rotEncrypt = RotEncrypt()
     
     var encryptionTypeChosen: Int?
     var decrytionChosen: Bool = false
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     func getTextAndEncrypt() {
         let text = inputTextField.text ?? ""
-        let encryptedText = rotEncrypt.encryptROT(textToEncrypt: text, typeOfEncrytion: encryptionTypeChosen!, decrypt: decrytionChosen)
+        let encryptedText = rotEncrypt.encryptROT(textToEncrypt: text, typeOfROTEncrytion: encryptionTypeChosen!, decrypt: decrytionChosen)
         outputLabel.text = encryptedText
     }
     

@@ -7,15 +7,15 @@
 
 import Foundation
 
-class RotEncrypt {
+struct RotEncrypt {
     
     var output: String = ""
     var bitMove: Int = 0
     
-    func encryptROT(textToEncrypt: String, typeOfEncrytion bitesToMove: Int = 13, decrypt: Bool = false) -> String {
+    mutating func encryptROT(textToEncrypt: String, typeOfROTEncrytion bitesToMove: Int = 13, decrypt: Bool = false) -> String {
         
         output = ""
-        self.bitMove = decrypt ? abs(26 - bitesToMove) : bitesToMove // If we need to decrypt we need to do reverse operation to e.g. rot-7 which is 7, we need 19, which can be done by getting abs value from 26 - 7 which is equal to 19
+        self.bitMove = decrypt ? 26 - bitesToMove : bitesToMove // If we need to decrypt we need to do reverse operation to e.g. rot-7 which is 7, we need 19, which can be done by getting value from 26 - 7 which is equal to 19
         let asciiValues = textToEncrypt.compactMap { $0.asciiValue } // Converts sign into ASCII value
         
         for encryption in 0..<asciiValues.count {
@@ -23,10 +23,10 @@ class RotEncrypt {
             let range = ((letterNumber >= 65 && letterNumber <= 90) || (letterNumber >= 97 && letterNumber <= 122))
             if range {
                 letterNumber += bitMove
-                if !(range) { letterNumber -= 26 } // If range was overextended, it moves back letterNumber, till it will be in range again
+                if !((letterNumber >= 65 && letterNumber <= 90) || (letterNumber >= 97 && letterNumber <= 122)) { letterNumber -= 26 } // If range was overextended, it moves back letterNumber, till it will be in range again
             }
-            let compleatedString = String(UnicodeScalar(UInt8(letterNumber)))
-            output += compleatedString
+            let transformedLetter = String(UnicodeScalar(UInt8(letterNumber)))
+            output += transformedLetter
         }
         return output
     }
