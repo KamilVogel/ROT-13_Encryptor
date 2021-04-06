@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E528B6E26191B5E0003EAEE /* RotEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */; };
+		8E9D8D9F261CE60900E67B96 /* EncryptionChosen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D8D9E261CE60900E67B96 /* EncryptionChosen.swift */; };
+		8E9D8DA4261CE8C700E67B96 /* TypesEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D8DA3261CE8C700E67B96 /* TypesEncryption.swift */; };
 		8ED7DE7225F44767001DBCC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7DE7125F44767001DBCC5 /* AppDelegate.swift */; };
 		8ED7DE7425F44767001DBCC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7DE7325F44767001DBCC5 /* SceneDelegate.swift */; };
 		8ED7DE7625F44767001DBCC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7DE7525F44767001DBCC5 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotEncrypt.swift; sourceTree = "<group>"; };
+		8E9D8D9E261CE60900E67B96 /* EncryptionChosen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionChosen.swift; sourceTree = "<group>"; };
+		8E9D8DA3261CE8C700E67B96 /* TypesEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesEncryption.swift; sourceTree = "<group>"; };
 		8ED7DE6E25F44767001DBCC5 /* ROT-13_Encryptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ROT-13_Encryptor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED7DE7125F44767001DBCC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ED7DE7325F44767001DBCC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */,
+				8E9D8D9E261CE60900E67B96 /* EncryptionChosen.swift */,
+				8E9D8DA3261CE8C700E67B96 /* TypesEncryption.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9D8DA4261CE8C700E67B96 /* TypesEncryption.swift in Sources */,
 				8EDD79B0261BB9CC000766EB /* TypeOfEncryptSwiftUIView.swift in Sources */,
+				8E9D8D9F261CE60900E67B96 /* EncryptionChosen.swift in Sources */,
 				8ED7DE7625F44767001DBCC5 /* ViewController.swift in Sources */,
 				8EDD79AB261BB9AE000766EB /* TypeOfEncryptViewController.swift in Sources */,
 				8ED7DE7225F44767001DBCC5 /* AppDelegate.swift in Sources */,
