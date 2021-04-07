@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E43A5DB261E4F7400EB6BE9 /* BaconEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43A5DA261E4F7400EB6BE9 /* BaconEncrypt.swift */; };
 		8E528B6E26191B5E0003EAEE /* RotEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */; };
 		8E9D8D9F261CE60900E67B96 /* EncryptionChosen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D8D9E261CE60900E67B96 /* EncryptionChosen.swift */; };
 		8E9D8DA4261CE8C700E67B96 /* TypesEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D8DA3261CE8C700E67B96 /* TypesEncryption.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E43A5DA261E4F7400EB6BE9 /* BaconEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaconEncrypt.swift; sourceTree = "<group>"; };
 		8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotEncrypt.swift; sourceTree = "<group>"; };
 		8E9D8D9E261CE60900E67B96 /* EncryptionChosen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionChosen.swift; sourceTree = "<group>"; };
 		8E9D8DA3261CE8C700E67B96 /* TypesEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesEncryption.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */,
 				8E9D8D9E261CE60900E67B96 /* EncryptionChosen.swift */,
 				8E9D8DA3261CE8C700E67B96 /* TypesEncryption.swift */,
+				8E43A5DA261E4F7400EB6BE9 /* BaconEncrypt.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				8EDD79AB261BB9AE000766EB /* TypeOfEncryptViewController.swift in Sources */,
 				8ED7DE7225F44767001DBCC5 /* AppDelegate.swift in Sources */,
 				8ED7DE7425F44767001DBCC5 /* SceneDelegate.swift in Sources */,
+				8E43A5DB261E4F7400EB6BE9 /* BaconEncrypt.swift in Sources */,
 				8E528B6E26191B5E0003EAEE /* RotEncrypt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
