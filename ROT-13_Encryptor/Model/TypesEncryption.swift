@@ -45,11 +45,14 @@ struct TypesEncryption {
         EncryptionChosen(encryptionType: "ROT47", keyIsRequired: false, numberOfROT: 47, keyEntered: nil),
         // not yet implemented
         //
-        EncryptionChosen(encryptionType: "Bacon's cipher", keyIsRequired: true, numberOfROT: nil, keyEntered: "") // 2nd version is going to be used
+        EncryptionChosen(encryptionType: "Bacon's cipher", keyIsRequired: false, numberOfROT: nil, keyEntered: nil) // 2nd version is going to be used
         
     ]
     
     func getNameROT(numberIndex: Int) -> String {
         return encrypt[numberIndex].encryptionType
+    }
+    func getNumberOfROT(numberIndex: Int) -> Int {
+        return encrypt[numberIndex].numberOfROT ?? 0
     }
 }
