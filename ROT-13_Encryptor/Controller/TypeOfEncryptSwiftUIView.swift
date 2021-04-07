@@ -38,11 +38,15 @@ struct TypeOfEncryptSwiftUIView: View {
                     } else {
                         Text("Disabled")
                     }
-
                     if selectedEncryptionTypeIndex > 26 {
                         Picker(selection: $selectedEncryptionTypeIndex, label: Text(keyEntered())) {
                             TextField("Insert Key", text: $key)
                         }
+                    }
+                    // Might be removed...
+                    Toggle("Enable Decryption", isOn: $enableSwitch)
+                    if enableSwitch {
+                        Text("Enabled")
                     }
                 }
             }
