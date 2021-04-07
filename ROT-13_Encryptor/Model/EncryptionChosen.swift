@@ -9,6 +9,8 @@ import Foundation
 
 struct EncryptionChosen {
     
+    // keyIsRequired and keyEntered might be removed in the future...
+    
     let encryptionType: String
     let keyIsRequired: Bool
     let numberOfROT: Int?
