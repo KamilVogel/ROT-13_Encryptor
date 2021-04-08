@@ -12,14 +12,14 @@ struct EncryptionChosen {
     // keyIsRequired and keyEntered might be removed in the future...
     
     let encryptionType: String
-    let keyIsRequired: Bool
+    //let keyIsRequired: Bool
     let numberOfROT: Int?
-    var keyEntered: String?
+    //var keyEntered: String?
     
-    init(encryptionType: String, keyIsRequired: Bool, numberOfROT: Int?, keyEntered: String?) {
+    init(encryptionType: String, numberOfROT: Int?) {
         self.encryptionType = encryptionType
-        self.keyIsRequired = keyIsRequired
+        //self.keyIsRequired = keyIsRequired
         self.numberOfROT = numberOfROT
-        self.keyEntered = keyEntered
+        //self.keyEntered = keyEntered
     }
 }

@@ -13,39 +13,41 @@ struct TypesEncryption {
     
     let encrypt = [
         
+        // 
+        //EncryptionChosen(encryptionType: "ROT01", keyIsRequired: false, numberOfROT:  1, keyEntered: nil),
         // ROT
-        EncryptionChosen(encryptionType: "ROT01", keyIsRequired: false, numberOfROT:  1, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT02", keyIsRequired: false, numberOfROT:  2, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT03", keyIsRequired: false, numberOfROT:  3, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT04", keyIsRequired: false, numberOfROT:  4, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT05", keyIsRequired: false, numberOfROT:  5, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT06", keyIsRequired: false, numberOfROT:  6, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT07", keyIsRequired: false, numberOfROT:  7, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT08", keyIsRequired: false, numberOfROT:  8, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT09", keyIsRequired: false, numberOfROT:  9, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT10", keyIsRequired: false, numberOfROT: 10, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT11", keyIsRequired: false, numberOfROT: 11, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT12", keyIsRequired: false, numberOfROT: 12, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT13", keyIsRequired: false, numberOfROT: 13, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT14", keyIsRequired: false, numberOfROT: 14, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT15", keyIsRequired: false, numberOfROT: 15, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT16", keyIsRequired: false, numberOfROT: 16, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT17", keyIsRequired: false, numberOfROT: 17, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT18", keyIsRequired: false, numberOfROT: 18, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT19", keyIsRequired: false, numberOfROT: 19, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT20", keyIsRequired: false, numberOfROT: 20, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT21", keyIsRequired: false, numberOfROT: 21, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT22", keyIsRequired: false, numberOfROT: 22, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT23", keyIsRequired: false, numberOfROT: 23, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT24", keyIsRequired: false, numberOfROT: 24, keyEntered: nil),
-        EncryptionChosen(encryptionType: "ROT25", keyIsRequired: false, numberOfROT: 25, keyEntered: nil),
+        EncryptionChosen(encryptionType: "ROT01", numberOfROT:  1),
+        EncryptionChosen(encryptionType: "ROT02", numberOfROT:  2),
+        EncryptionChosen(encryptionType: "ROT03", numberOfROT:  3),
+        EncryptionChosen(encryptionType: "ROT04", numberOfROT:  4),
+        EncryptionChosen(encryptionType: "ROT05", numberOfROT:  5),
+        EncryptionChosen(encryptionType: "ROT06", numberOfROT:  6),
+        EncryptionChosen(encryptionType: "ROT07", numberOfROT:  7),
+        EncryptionChosen(encryptionType: "ROT08", numberOfROT:  8),
+        EncryptionChosen(encryptionType: "ROT09", numberOfROT:  9),
+        EncryptionChosen(encryptionType: "ROT10", numberOfROT: 10),
+        EncryptionChosen(encryptionType: "ROT11", numberOfROT: 11),
+        EncryptionChosen(encryptionType: "ROT12", numberOfROT: 12),
+        EncryptionChosen(encryptionType: "ROT13", numberOfROT: 13),
+        EncryptionChosen(encryptionType: "ROT14", numberOfROT: 14),
+        EncryptionChosen(encryptionType: "ROT15", numberOfROT: 15),
+        EncryptionChosen(encryptionType: "ROT16", numberOfROT: 16),
+        EncryptionChosen(encryptionType: "ROT17", numberOfROT: 17),
+        EncryptionChosen(encryptionType: "ROT18", numberOfROT: 18),
+        EncryptionChosen(encryptionType: "ROT19", numberOfROT: 19),
+        EncryptionChosen(encryptionType: "ROT20", numberOfROT: 20),
+        EncryptionChosen(encryptionType: "ROT21", numberOfROT: 21),
+        EncryptionChosen(encryptionType: "ROT22", numberOfROT: 22),
+        EncryptionChosen(encryptionType: "ROT23", numberOfROT: 23),
+        EncryptionChosen(encryptionType: "ROT24", numberOfROT: 24),
+        EncryptionChosen(encryptionType: "ROT25", numberOfROT: 25),
         
         // Other
-        EncryptionChosen(encryptionType: "Caesar cipher", keyIsRequired: false, numberOfROT: 3, keyEntered: nil), // Caesar cipher == ROT03
-        EncryptionChosen(encryptionType: "ROT47", keyIsRequired: false, numberOfROT: 47, keyEntered: nil),
-        // not yet implemented
+        EncryptionChosen(encryptionType: "Caesar cipher", numberOfROT: 3), // Caesar cipher == ROT03
+        EncryptionChosen(encryptionType: "ROT47", numberOfROT: 47),
         //
-        EncryptionChosen(encryptionType: "Bacon's cipher", keyIsRequired: false, numberOfROT: nil, keyEntered: nil) // 2nd version is going to be used
+        // Decrypting is not working correctly yet
+        EncryptionChosen(encryptionType: "Bacon's cipher", numberOfROT: nil) // 2nd version is going to be used
         
     ]
     

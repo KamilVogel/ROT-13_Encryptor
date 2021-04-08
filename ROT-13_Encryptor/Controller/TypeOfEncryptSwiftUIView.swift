@@ -31,36 +31,18 @@ struct TypeOfEncryptSwiftUIView: View {
                     }
                     //Text("Selected \(selectedEncryptionTypeIndex)")
                     Text("Selected \(encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex))")
-                    Text("\(selectedEncryptionTypeIndex)")
+                    Text("\(encryptionType.getNumberOfROT(numberIndex: selectedEncryptionTypeIndex))")
                     Toggle("Enable Decryption", isOn: $enableSwitch)
                     if enableSwitch {
                         Text("Enabled")
                     } else {
                         Text("Disabled")
                     }
-                    if selectedEncryptionTypeIndex > 26 {
-                        Picker(selection: $selectedEncryptionTypeIndex, label: Text(keyEntered())) {
-                            TextField("Insert Key", text: $key)
-                        }
-                    }
-                    // Might be removed...
-                    Toggle("Enable Decryption", isOn: $enableSwitch)
-                    if enableSwitch {
-                        Text("Enabled")
-                    }
                 }
             }
             .navigationBarTitle("Settings")
         }
     }
-    
-    func keyEntered() -> String {
-        if key == "" {
-            return "Enter Key"
-        }
-        return "Selected Key: \(key)"
-    }
-
 }
 
 
