@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func encrytionSwitch(_ sender: UISwitch) {
-        decrytionChosen = !sender.isOn
+        decrytionChosen = !VarChosen.decrypt
         getTextAndEncrypt()
     }
     

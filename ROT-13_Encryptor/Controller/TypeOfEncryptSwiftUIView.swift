@@ -10,13 +10,10 @@ import SwiftUI
 struct TypeOfEncryptSwiftUIView: View {
     
     var encryptionType = TypesEncryption()
+    var varChosen = VarChosen()
     
     @State private var selectedEncryptionTypeIndex: Int = 0
-    @State private var enableSwitch: Bool = false
-    @State private var key: String = ""
-    //@State private var isKeySelected: String = ""
-    
-    
+    @State private var enableSwitch = false
     
     var body: some View {
         
@@ -25,11 +22,9 @@ struct TypeOfEncryptSwiftUIView: View {
                 Section {
                     Picker(selection: $selectedEncryptionTypeIndex, label: Text("Selected Encryption")) {
                         ForEach(0 ..< 28) {number in
-                            //Text(encrytpionSelect[$0])
                             Text(encryptionType.getNameROT(numberIndex: number))
                         }
                     }
-                    //Text("Selected \(selectedEncryptionTypeIndex)")
                     Text("Selected \(encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex))")
                     Text("\(encryptionType.getNumberOfROT(numberIndex: selectedEncryptionTypeIndex))")
                     Toggle("Enable Decryption", isOn: $enableSwitch)
@@ -41,6 +36,11 @@ struct TypeOfEncryptSwiftUIView: View {
                 }
             }
             .navigationBarTitle("Settings")
+        }
+        .onDisappear {
+            VarChosen.name   = encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex)
+            VarChosen.number = encryptionType.getNumberOfROT(numberIndex: selectedEncryptionTypeIndex)
+            VarChosen.decrypt = enableSwitch
         }
     }
 }
