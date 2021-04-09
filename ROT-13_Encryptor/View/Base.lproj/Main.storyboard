@@ -119,6 +119,7 @@
                     <connections>
                         <outlet property="inputTextField" destination="XZ2-r7-5Wi" id="f39-ZT-8ji"/>
                         <outlet property="outputLabel" destination="U5r-v7-CXM" id="wrs-lR-Zml"/>
+                        <outlet property="titleLabel" destination="lpj-TG-Yyp" id="6Dd-4h-UM6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -29,6 +29,9 @@ struct TypeOfEncryptSwiftUIView: View {
                             Text(encryptionType.getNameROT(numberIndex: number))
                         }
                     }
+                    .onReceive([self.selectedEncryptionTypeIndex].publisher.first(), perform: { _ in
+                        UserDefaults.standard.set(encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex), forKey: "Name")
+                    })
                     Text("Selected \(encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex))")
                     Text("\(encryptionType.getNumberOfROT(numberIndex: selectedEncryptionTypeIndex))")
                     Toggle("Enable Decryption", isOn: $enableSwitch)
@@ -46,11 +49,9 @@ struct TypeOfEncryptSwiftUIView: View {
             enableSwitch = decryptChosen
         }
         .onDisappear {
-            
             UserDefaults.standard.set(encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex), forKey: "Name")
             UserDefaults.standard.set(encryptionType.getNumberOfROT(numberIndex: selectedEncryptionTypeIndex), forKey: "Number")
             UserDefaults.standard.set(enableSwitch, forKey: "Decrypt")
-            
         }
     }
 }

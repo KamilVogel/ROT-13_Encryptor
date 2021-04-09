@@ -16,6 +16,7 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,11 @@ class ViewController: UIViewController {
         outputLabel.text = ""
         encryptionTypeChosen = 7
         decrytionChosen = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let title = UserDefaults.standard.string(forKey: "Name")
+        titleLabel.text = title
     }
 
     @IBAction func encrytionSwitch(_ sender: UISwitch) {
