@@ -57,4 +57,7 @@ struct TypesEncryption {
     func getNumberOfROT(numberIndex: Int) -> Int {
         return encrypt[numberIndex].numberOfROT ?? 0
     }
+    func getIndex(encryptionType: String) -> Int{
+        return encrypt.firstIndex(where: { $0.encryptionType == encryptionType }) ?? 0
+    }
 }
