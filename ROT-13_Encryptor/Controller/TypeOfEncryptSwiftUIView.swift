@@ -9,11 +9,13 @@ import SwiftUI
 
 struct TypeOfEncryptSwiftUIView: View {
     
-    var encryptionType = TypesEncryption()
-    //var varChosen = VarChosen()
+    var typesEncryption = TypesEncryption()
     
     @State private var selectedEncryptionTypeIndex: Int = 0
-    @State private var enableSwitch = false
+    @State private var switchText = ""
+    @State private var enableSwitch = false {
+        didSet { switchText = enableSwitch ? "Decryption enabled" : "Decryption disabled" }
+    }
     
     @State private var nameChosen = UserDefaults.standard.string(forKey: "Name")
     @State private var numberChosen = UserDefaults.standard.integer(forKey: "Number")
@@ -25,33 +27,26 @@ struct TypeOfEncryptSwiftUIView: View {
             Form {
                 Section {
                     Picker(selection: $selectedEncryptionTypeIndex, label: Text("Selected Encryption")) {
-                        ForEach(0 ..< 28) {number in
-                            Text(encryptionType.getNameROT(numberIndex: number))
+                        ForEach(0 ..< typesEncryption.encrypt.count) {number in
+                            Text(typesEncryption.getNameROT(numberIndex: number))
                         }
                     }
                     .onReceive([self.selectedEncryptionTypeIndex].publisher.first(), perform: { _ in
-                        UserDefaults.standard.set(encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex), forKey: "Name")
+                        UserDefaults.standard.set(typesEncryption.getNameROT(numberIndex: selectedEncryptionTypeIndex), forKey: "Name")
+                        UserDefaults.standard.set(typesEncryption.getNumberOfROT(numberIndex: selectedEncryptionTypeIndex), forKey: "Number")
                     })
-                    Text("Selected \(encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex))")
-                    Text("\(encryptionType.getNumberOfROT(numberIndex: selectedEncryptionTypeIndex))")
-                    Toggle("Enable Decryption", isOn: $enableSwitch)
-                    if enableSwitch {
-                        Text("Enabled")
-                    } else {
-                        Text("Disabled")
-                    }
+                    Toggle(switchText, isOn: $enableSwitch)
+                        .onReceive([self.enableSwitch].publisher.first(), perform: {_ in
+                            UserDefaults.standard.set(enableSwitch, forKey: "Decrypt")
+                            switchText = enableSwitch ? "Decryption enabled" : "Decryption disabled"
+                        })
                 }
             }
             .navigationBarTitle("Settings")
         }
         .onAppear() {
-            selectedEncryptionTypeIndex = encryptionType.getIndex(encryptionType: nameChosen ?? "ROT01")
+            selectedEncryptionTypeIndex = typesEncryption.getIndex(encryptionType: nameChosen ?? "ROT01")
             enableSwitch = decryptChosen
-        }
-        .onDisappear {
-            UserDefaults.standard.set(encryptionType.getNameROT(numberIndex: selectedEncryptionTypeIndex), forKey: "Name")
-            UserDefaults.standard.set(encryptionType.getNumberOfROT(numberIndex: selectedEncryptionTypeIndex), forKey: "Number")
-            UserDefaults.standard.set(enableSwitch, forKey: "Decrypt")
         }
     }
 }
