@@ -12,6 +12,7 @@ struct BaconEncrypt {
     var output: String = ""
     
     let dictionaryOfCypher = [
+        
         "A": "aaaaa",
         "B": "aaaab",
         "C": "aaaba",
@@ -65,31 +66,42 @@ struct BaconEncrypt {
         "babbb": "X",
         "bbaaa": "Y",
         "bbaab": "Z"
+        
     ]
     
     mutating func encryptBacon(textToEncrypt: String, decrypt: Bool) -> String {
+        if decrypt {
+            return dencrypt(textToEncrypt: textToEncrypt)
+        } else {
+            return encrypt(textToEncrypt: textToEncrypt)
+        }
+    }
+    
+    mutating func encrypt(textToEncrypt: String) -> String {
     
         output = ""
-        let asciiValues = textToEncrypt.uppercased().compactMap { $0 }
+        let letterArray = textToEncrypt.uppercased().compactMap { $0 }
         
-        for var encryption in 0..<asciiValues.count {
-            let letter = asciiValues[encryption]
+        for var encryption in 0..<letterArray.count {
+            let letter = letterArray[encryption]
             if let encrypt = dictionaryOfCypher["\(letter)"] {output += encrypt + " "}
             encryption += 5
         }
-        output.removeLast()
+        if output != "" {
+            output.removeLast()
+        }
         return output
     }
     
-    mutating func dencryptBacon(textToEncrypt: String, decrypt: Bool) -> String {
+    mutating func dencrypt(textToEncrypt: String) -> String {
     
         output = ""
         var divideIntoFiveLetters = 0
         var oneLetter = ""
-        let asciiValues = textToEncrypt.lowercased().compactMap { $0 }
+        let letterArray = textToEncrypt.lowercased().compactMap { $0 }
         
-        for encryption in 0..<asciiValues.count {
-            let letter = asciiValues[encryption]
+        for encryption in 0..<letterArray.count {
+            let letter = letterArray[encryption]
             divideIntoFiveLetters += 1
             switch letter {
             case "a", "b":
