@@ -8,8 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var rotEncrypt = RotEncrypt()
+    
+    var encrypt = Encrypt()
     
     var encryptionTypeChosen: Int?
     var decrytionChosen: Bool = false
@@ -22,17 +22,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         outputLabel.text = ""
-        encryptionTypeChosen = 7
-        decrytionChosen = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         let title = UserDefaults.standard.string(forKey: "Name")
         titleLabel.text = title
-    }
-
-    @IBAction func encrytionSwitch(_ sender: UISwitch) {
-        decrytionChosen = !VarChosen.decrypt
         getTextAndEncrypt()
     }
     
@@ -49,8 +43,9 @@ class ViewController: UIViewController {
     }
     
     func getTextAndEncrypt() {
+        print("Startin!")
         let text = inputTextField.text ?? ""
-        let encryptedText = rotEncrypt.encryptROT(textToEncrypt: text, typeOfROTEncrytion: encryptionTypeChosen!, decrypt: decrytionChosen)
+        let encryptedText = encrypt.encrypt(textToEncrypt: text, nameOfEncrytion: UserDefaults.standard.string(forKey: "Name")!, typeOfROTEncrytion: Int(UserDefaults.standard.string(forKey: "Number") ?? ""), decrypt: UserDefaults.standard.bool(forKey: "Decrypt"))
         outputLabel.text = encryptedText
     }
     

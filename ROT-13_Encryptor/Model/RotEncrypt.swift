@@ -17,7 +17,7 @@ struct RotEncrypt {
     //
     
     
-    mutating func encryptROT(textToEncrypt: String, typeOfROTEncrytion bitesToMove: Int = 13, decrypt: Bool = false) -> String {
+    mutating func encryptROT(textToEncrypt: String, typeOfROTEncrytion bitesToMove: Int, decrypt: Bool ) -> String {
         
         output = ""
         bitMove = decrypt ? 26 - bitesToMove : bitesToMove // If we need to decrypt we need to do reverse operation to e.g. rot-7 which is 7, we need 19, which can be done by getting value from 26 - 7 which is equal to 19
@@ -42,7 +42,7 @@ struct RotEncrypt {
     // MARK: TO Shorten ROT47
     //
     
-    mutating func encryptROT47(textToEncrypt: String, typeOfROTEncrytion bitesToMove: Int = 47, decrypt: Bool = false) -> String {
+    mutating func encryptROT47(textToEncrypt: String, typeOfROTEncrytion bitesToMove: Int = 47) -> String {
         
         output = ""
         bitMove = bitesToMove
