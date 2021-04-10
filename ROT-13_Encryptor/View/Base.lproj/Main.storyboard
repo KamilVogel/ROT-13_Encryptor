@@ -64,25 +64,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encrypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugx-Ti-QvV">
-                                <rect key="frame" x="20" y="210" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWQ-97-LGT">
-                                <rect key="frame" x="345" y="210" width="51" height="31"/>
-                                <connections>
-                                    <action selector="encrytionSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="tgt-QA-1MZ"/>
-                                </connections>
-                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Oj-rQ-AzD"/>
-                            <constraint firstItem="qWQ-97-LGT" firstAttribute="trailing" secondItem="XZ2-r7-5Wi" secondAttribute="trailing" id="2UZ-Sm-TMM"/>
-                            <constraint firstItem="Ugx-Ti-QvV" firstAttribute="top" secondItem="XZ2-r7-5Wi" secondAttribute="bottom" constant="24" id="7ZF-3Q-6jz"/>
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="B3S-Xr-E79"/>
                             <constraint firstItem="aAO-5d-Uwk" firstAttribute="leading" secondItem="XZ2-r7-5Wi" secondAttribute="leading" id="B3m-FT-Upq"/>
                             <constraint firstItem="a4D-vi-Qc0" firstAttribute="leading" secondItem="U5r-v7-CXM" secondAttribute="leading" id="Bsf-lH-c7s"/>
@@ -91,8 +77,6 @@
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gdq-NF-Mgk"/>
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="centerX" secondItem="U5r-v7-CXM" secondAttribute="centerX" id="OU1-Yg-biK"/>
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="centerX" secondItem="a4D-vi-Qc0" secondAttribute="centerX" id="XEW-X8-J6g"/>
-                            <constraint firstItem="Ugx-Ti-QvV" firstAttribute="top" secondItem="qWQ-97-LGT" secondAttribute="top" id="Y21-b8-6Ol"/>
-                            <constraint firstItem="Ugx-Ti-QvV" firstAttribute="leading" secondItem="XZ2-r7-5Wi" secondAttribute="leading" id="bY3-6u-7DH"/>
                             <constraint firstItem="U5r-v7-CXM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="281" id="cJ2-0V-hV3"/>
                             <constraint firstItem="XZ2-r7-5Wi" firstAttribute="top" secondItem="lpj-TG-Yyp" secondAttribute="bottom" constant="57" id="eIr-tT-kAA"/>
                             <constraint firstItem="a4D-vi-Qc0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="244" id="g5T-bx-R5x"/>
@@ -119,6 +103,7 @@
                     <connections>
                         <outlet property="inputTextField" destination="XZ2-r7-5Wi" id="f39-ZT-8ji"/>
                         <outlet property="outputLabel" destination="U5r-v7-CXM" id="wrs-lR-Zml"/>
+                        <outlet property="titleLabel" destination="lpj-TG-Yyp" id="6Dd-4h-UM6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -19,6 +19,7 @@
 		8ED7DE7E25F4476C001DBCC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED7DE7C25F4476C001DBCC5 /* LaunchScreen.storyboard */; };
 		8EDD79AB261BB9AE000766EB /* TypeOfEncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD79AA261BB9AE000766EB /* TypeOfEncryptViewController.swift */; };
 		8EDD79B0261BB9CC000766EB /* TypeOfEncryptSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD79AF261BB9CC000766EB /* TypeOfEncryptSwiftUIView.swift */; };
+		8EE15503262219B6007A99F1 /* Encrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE15502262219B6007A99F1 /* Encrypt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8ED7DE8F25F4476C001DBCC5 /* ROT-13_EncryptorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ROT-13_EncryptorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDD79AA261BB9AE000766EB /* TypeOfEncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfEncryptViewController.swift; sourceTree = "<group>"; };
 		8EDD79AF261BB9CC000766EB /* TypeOfEncryptSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfEncryptSwiftUIView.swift; sourceTree = "<group>"; };
+		8EE15502262219B6007A99F1 /* Encrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encrypt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				8E9D8D9E261CE60900E67B96 /* EncryptionChosen.swift */,
 				8E9D8DA3261CE8C700E67B96 /* TypesEncryption.swift */,
 				8E43A5DA261E4F7400EB6BE9 /* BaconEncrypt.swift */,
+				8EE15502262219B6007A99F1 /* Encrypt.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				8ED7DE7425F44767001DBCC5 /* SceneDelegate.swift in Sources */,
 				8E43A5DB261E4F7400EB6BE9 /* BaconEncrypt.swift in Sources */,
 				8E528B6E26191B5E0003EAEE /* RotEncrypt.swift in Sources */,
+				8EE15503262219B6007A99F1 /* Encrypt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
