@@ -10,17 +10,19 @@ import UIKit
 class ViewController: UIViewController {
     
     var encrypt = Encrypt()
-    
-    var encryptionTypeChosen: Int?
-    var decrytionChosen: Bool = false
    
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        if UserDefaults.standard.string(forKey: "Name") == nil {
+            // Sets default values if it wasnt firstly set
+            UserDefaults.standard.set("ROT13", forKey: "Name")
+            UserDefaults.standard.set(13, forKey: "Number")
+        }
         outputLabel.text = ""
     }
     
@@ -43,9 +45,11 @@ class ViewController: UIViewController {
     }
     
     func getTextAndEncrypt() {
-        print("Startin!")
         let text = inputTextField.text ?? ""
-        let encryptedText = encrypt.encrypt(textToEncrypt: text, nameOfEncrytion: UserDefaults.standard.string(forKey: "Name")!, typeOfROTEncrytion: Int(UserDefaults.standard.string(forKey: "Number") ?? ""), decrypt: UserDefaults.standard.bool(forKey: "Decrypt"))
+        let name = UserDefaults.standard.string(forKey: "Name") ?? ""
+        let type = UserDefaults.standard.integer(forKey: "Number")
+        let decryptSelected = UserDefaults.standard.bool(forKey: "Decrypt")
+        let encryptedText = encrypt.encrypt(textToEncrypt: text, nameOfEncrytion: name, typeOfROTEncrytion: type, decrypt: decryptSelected)
         outputLabel.text = encryptedText
     }
     
