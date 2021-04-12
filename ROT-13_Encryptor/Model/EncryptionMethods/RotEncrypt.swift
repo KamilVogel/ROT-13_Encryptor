@@ -12,11 +12,6 @@ struct RotEncrypt {
     var output: String = ""
     var bitMove: Int = 0
     
-    //
-    // MARK: Working ROT
-    //
-    
-    
     mutating func encryptROT(textToEncrypt: String, typeOfROTEncrytion bitesToMove: Int, decrypt: Bool ) -> String {
         
         output = ""
@@ -35,12 +30,6 @@ struct RotEncrypt {
         }
         return output
     }
-    
-    
-    
-    //
-    // MARK: TO Shorten ROT47
-    //
     
     mutating func encryptROT47(textToEncrypt: String, typeOfROTEncrytion bitesToMove: Int = 47) -> String {
         

@@ -88,7 +88,7 @@ struct BaconEncrypt {
             encryption += 5
         }
         if output != "" {
-            output.removeLast()
+            output.removeLast() //removes last space
         }
         return output
     }
@@ -104,6 +104,7 @@ struct BaconEncrypt {
             let letter = letterArray[encryption]
             divideIntoFiveLetters += 1
             switch letter {
+            //divides into 5 segments and then it decrypts (if possible)
             case "a", "b":
                 if divideIntoFiveLetters % 5 == 0 {
                     oneLetter += String(letter)

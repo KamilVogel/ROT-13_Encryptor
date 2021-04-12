@@ -9,12 +9,8 @@ import Foundation
 
 struct TypesEncryption {
     
-    var numberIndex: Int = 0
-    
     let encrypt = [
         
-        // 
-        //EncryptionChosen(encryptionType: "ROT01", keyIsRequired: false, numberOfROT:  1, keyEntered: nil),
         // ROT
         EncryptionChosen(encryptionType: "ROT01", numberOfROT:  1),
         EncryptionChosen(encryptionType: "ROT02", numberOfROT:  2),
@@ -44,9 +40,7 @@ struct TypesEncryption {
         
         // Other
         EncryptionChosen(encryptionType: "Caesar cipher", numberOfROT: 3), // Caesar cipher == ROT03
-        EncryptionChosen(encryptionType: "ROT47", numberOfROT: 47),
-        //
-        // Decrypting is not working correctly yet
+        EncryptionChosen(encryptionType: "ROT47", numberOfROT: 47),         // ROT47 has diffrent alphabet (range of ascii values)
         EncryptionChosen(encryptionType: "Bacon's cipher", numberOfROT: nil) // 2nd version is going to be used
         
     ]
@@ -54,10 +48,10 @@ struct TypesEncryption {
     func getNameROT(numberIndex: Int) -> String {
         return encrypt[numberIndex].encryptionType
     }
-    func getNumberOfROT(numberIndex: Int) -> Int {
-        return encrypt[numberIndex].numberOfROT ?? 0
+    func getNumberOfROT(numberIndex: Int) -> Int? {
+        return encrypt[numberIndex].numberOfROT
     }
     func getIndex(encryptionType: String) -> Int{
-        return encrypt.firstIndex(where: { $0.encryptionType == encryptionType }) ?? 0
+        return encrypt.firstIndex(where: { $0.encryptionType == encryptionType }) ?? 13
     }
 }

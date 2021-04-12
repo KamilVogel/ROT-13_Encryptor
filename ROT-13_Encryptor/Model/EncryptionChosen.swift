@@ -9,17 +9,13 @@ import Foundation
 
 struct EncryptionChosen {
     
-    // keyIsRequired and keyEntered might be removed in the future...
+    // Defines the struct of needed componetnts for encryption
     
     let encryptionType: String
-    //let keyIsRequired: Bool
     let numberOfROT: Int?
-    //var keyEntered: String?
     
     init(encryptionType: String, numberOfROT: Int?) {
         self.encryptionType = encryptionType
-        //self.keyIsRequired = keyIsRequired
         self.numberOfROT = numberOfROT
-        //self.keyEntered = keyEntered
     }
 }

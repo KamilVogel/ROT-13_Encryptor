@@ -84,13 +84,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E0198C026227573001E4633 /* EncryptionMethods */ = {
+			isa = PBXGroup;
+			children = (
+				8E43A5DA261E4F7400EB6BE9 /* BaconEncrypt.swift */,
+				8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */,
+			);
+			path = EncryptionMethods;
+			sourceTree = "<group>";
+		};
 		8E528B6A26191B090003EAEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8E528B6D26191B5E0003EAEE /* RotEncrypt.swift */,
+				8E0198C026227573001E4633 /* EncryptionMethods */,
 				8E9D8D9E261CE60900E67B96 /* EncryptionChosen.swift */,
 				8E9D8DA3261CE8C700E67B96 /* TypesEncryption.swift */,
-				8E43A5DA261E4F7400EB6BE9 /* BaconEncrypt.swift */,
 				8EE15502262219B6007A99F1 /* Encrypt.swift */,
 			);
 			path = Model;

@@ -50,13 +50,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROT-13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpj-TG-Yyp">
-                                <rect key="frame" x="158" y="74" width="98" height="21"/>
+                                <rect key="frame" x="20" y="74" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5r-v7-CXM">
-                                <rect key="frame" x="20" y="281" width="374" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="U5r-v7-CXM">
+                                <rect key="frame" x="20" y="281" width="374" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Xnm-B1-HW2"/>
                                 </constraints>
@@ -69,6 +69,7 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Oj-rQ-AzD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lpj-TG-Yyp" secondAttribute="trailing" constant="20" id="2md-lX-2hr"/>
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="B3S-Xr-E79"/>
                             <constraint firstItem="aAO-5d-Uwk" firstAttribute="leading" secondItem="XZ2-r7-5Wi" secondAttribute="leading" id="B3m-FT-Upq"/>
                             <constraint firstItem="a4D-vi-Qc0" firstAttribute="leading" secondItem="U5r-v7-CXM" secondAttribute="leading" id="Bsf-lH-c7s"/>
@@ -78,6 +79,7 @@
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="centerX" secondItem="U5r-v7-CXM" secondAttribute="centerX" id="OU1-Yg-biK"/>
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="centerX" secondItem="a4D-vi-Qc0" secondAttribute="centerX" id="XEW-X8-J6g"/>
                             <constraint firstItem="U5r-v7-CXM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="281" id="cJ2-0V-hV3"/>
+                            <constraint firstItem="lpj-TG-Yyp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dri-AC-I73"/>
                             <constraint firstItem="XZ2-r7-5Wi" firstAttribute="top" secondItem="lpj-TG-Yyp" secondAttribute="bottom" constant="57" id="eIr-tT-kAA"/>
                             <constraint firstItem="a4D-vi-Qc0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="244" id="g5T-bx-R5x"/>
                             <constraint firstItem="lpj-TG-Yyp" firstAttribute="centerX" secondItem="aAO-5d-Uwk" secondAttribute="centerX" id="hDJ-MB-8qg"/>
