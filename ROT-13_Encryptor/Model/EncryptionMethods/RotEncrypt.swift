@@ -20,10 +20,15 @@ struct RotEncrypt {
         
         for encryption in 0..<asciiValues.count {
             var letterNumber = Int(asciiValues[encryption])
-            let range = ((letterNumber >= 65 && letterNumber <= 90) || (letterNumber >= 97 && letterNumber <= 122))
-            if range {
-                letterNumber += bitMove
-                if !((letterNumber >= 65 && letterNumber <= 90) || (letterNumber >= 97 && letterNumber <= 122)) { letterNumber -= 26 } // If range was overextended, it moves back letterNumber, till it will be in range again
+            switch letterNumber {
+                case 65...90:
+                    letterNumber += bitMove
+                    if !(letterNumber >= 65 && letterNumber <= 90) { letterNumber -= 26 } // If range was  overextended, it moves back letterNumber, till it will be in range again
+                case 97...122:
+                    letterNumber += bitMove
+                    if !(letterNumber >= 97 && letterNumber <= 122) { letterNumber -= 26 } // If range was overextended, it moves back letterNumber, till it will be in range again
+                default:
+                    break // If sign is e.g. number, it passes unaltered
             }
             let transformedLetter = String(UnicodeScalar(UInt8(letterNumber)))
             output += transformedLetter
