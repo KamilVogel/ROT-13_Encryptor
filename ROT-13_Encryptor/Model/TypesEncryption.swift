@@ -42,6 +42,7 @@ struct TypesEncryption {
         EncryptionChosen(encryptionType: "Caesar cipher", numberOfROT: 3), // Caesar cipher == ROT03
         EncryptionChosen(encryptionType: "ROT47", numberOfROT: 47),         // ROT47 has diffrent alphabet (range of ascii values)
         EncryptionChosen(encryptionType: "Bacon's cipher", numberOfROT: nil) // 2nd version is going to be used
+        //EncryptionChosen(encryptionType: "Name of Cipher", numberOfROT: nil)
         
     ]
     
